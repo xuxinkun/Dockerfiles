@@ -13,4 +13,8 @@ My page on hub.docker.com can be found [here](https://hub.docker.com/r/xuxinkun/
 	* base
 		* [centos](openstack/base/centos/Dockerfile)	
 		* [ubuntu](openstack/base/ubuntu/Dockerfile)
+	* heat
+		* [centos](openstack/heat/centos/Dockerfile)
+	* magnum
+		* [centos](openstack/magnum/centos/Dockerfile)
 		
