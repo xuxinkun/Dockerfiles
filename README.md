@@ -8,7 +8,7 @@ My page on hub.docker.com can be found [here](https://hub.docker.com/r/xuxinkun/
 
 * os
 	* [centos:7](os/centos7/Dockerfile)
-	* [ubuntu:14.04](os/centos7/Dockerfile)
+	* [ubuntu:14.04](os/ubuntu14.04/Dockerfile)
 * openstack
 	* base
 		* [centos](openstack/base/centos/Dockerfile)	
