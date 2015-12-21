@@ -17,4 +17,9 @@ My page on hub.docker.com can be found [here](https://hub.docker.com/r/xuxinkun/
 		* [centos](openstack/heat/centos/Dockerfile)
 	* magnum
 		* [centos](openstack/magnum/centos/Dockerfile)
+	* aodh
+		* [centos](openstack/aodh/centos/Dockerfile)
+* other
+	* [discovery.etcd.io](other/discovery.etcd.io/Dockerfile)
+		
 		
