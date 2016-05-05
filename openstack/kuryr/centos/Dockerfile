@@ -4,5 +4,5 @@ RUN pip install -r /requirements.txt
 RUN yum install -y git python-setuptools
 RUN easy_install tox
 RUN git clone https://github.com/openstack/kuryr
-RUN ./scripts/run_kuryr.sh
+RUN cd kuryr && tox -egenconfig
 #RUN cd /magnum && python setup.py install
