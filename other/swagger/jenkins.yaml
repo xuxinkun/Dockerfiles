@@ -69,6 +69,8 @@ paths:
       responses:
         200:
           description: success.
+          schema:
+            type: string
         500:
           description: error.
   /job/{job_name}/config.xml:
@@ -87,6 +89,8 @@ paths:
       responses:
         200:
           description: success.
+          schema:
+            type: string
         500:
           description: error.
   /job/{job_name}/{job_id}/api/json:
@@ -111,6 +115,8 @@ paths:
       responses:
         200:
           description: success.
+          schema:
+            type: string
         500:
           description: error.
   /job/{job_name}/{job_id}/consoleText:
@@ -135,6 +141,8 @@ paths:
       responses:
         200:
           description: success.
+          schema:
+            type: string
         500:
           description: error.
   /job/{job_name}/configSubmit:
@@ -183,14 +191,5 @@ paths:
       responses:
         200:
           description: success.
-          schema:
-            type: string
         500:
           description: error.
-definitions:
-  Resp:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The resp.
