@@ -21,6 +21,12 @@ paths:
       summary: Create Job
       description: |
         Create Job
+      parameters:
+        - name: jobBody
+          in: body
+          description: jobBody.
+          required: true
+          type: string
       tags:
         - Products
       responses:
@@ -28,25 +34,19 @@ paths:
           description: success.
         500:
           description: error.
-      parameters:
-        - name: jobBody
-          in: body
-          description: jobBody.
-          required: true
-          type: string
   /job/{job_name}/doDelete:
     post:
       summary: Delete job
+      description: |
+        Delete job
+      tags:
+        - Products
       parameters:
         - name: job_name
           in: path
           description: Job name.
           required: true
           type: string
-      description: |
-        Delete job
-      tags:
-        - Products
       responses:
         200:
           description: success.
@@ -55,14 +55,14 @@ paths:
   /job/{job_name}/api/json:
     get:
       summary: get history
+      description: |
+        get history
       parameters:
         - name: job_name
           in: path
           description: Job name.
           required: true
           type: string
-      description: |
-        get history
       tags:
         - Products
       responses:
@@ -73,14 +73,14 @@ paths:
   /job/{job_name}/config.xml:
     get:
       summary: get job config
+      description: |
+        Delete job
       parameters:
         - name: job_name
           in: path
           description: Job name.
           required: true
           type: string
-      description: |
-        Delete job
       tags:
         - Products
       responses:
@@ -91,6 +91,8 @@ paths:
   /job/{job_name}/{job_id}/api/json:
     get:
       summary: get job build info
+      description: |
+        get job build info
       parameters:
         - name: job_name
           in: path
@@ -103,8 +105,6 @@ paths:
           required: true
           type: integer
           format: int64
-      description: |
-        get job build info
       tags:
         - Products
       responses:
@@ -115,6 +115,8 @@ paths:
   /job/{job_name}/{job_id}/consoleText:
     get:
       summary: get job build log.
+      description: |
+        get job build log.
       parameters:
         - name: job_name
           in: path
@@ -127,8 +129,6 @@ paths:
           required: true
           type: integer
           format: int64
-      description: |
-        get job build log.
       tags:
         - Products
       responses:
@@ -139,6 +139,8 @@ paths:
   /job/{job_name}/configSubmit:
     post:
       summary: post job config.
+      description: |
+        post job config.
       parameters:
         - name: job_name
           in: path
@@ -150,8 +152,6 @@ paths:
           description: configBody.
           required: true
           type: string
-      description: |
-        post job config.
       tags:
         - Products
       responses:
@@ -162,6 +162,8 @@ paths:
   /job/{job_name}/build:
     post:
       summary: post a build.
+      description: |
+        post a build.
       parameters:
         - name: job_name
           in: path
@@ -173,8 +175,6 @@ paths:
           description: Buildbody.
           required: true
           type: string
-      description: |
-        post a build.
       tags:
         - Products
       responses:
