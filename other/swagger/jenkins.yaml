@@ -1,0 +1,132 @@
+swagger: '2.0'
+info:
+  title: Jenkins API
+  description: These APIs provide services for jenkins project.
+  version: "0.0.1"
+# the domain of the service
+host: localhost
+# array of all schemes that your API supports
+schemes:
+  - http
+basePath: /api
+produces:
+  - application/json
+  - text/plain
+consumes:
+  - text/plain
+  - application/json
+paths:
+  /createItem:
+    post:
+      summary: Create Job
+      description: |
+        Create Job
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+      parameters:
+        - name: jobBody
+          in: query
+          description: jobBody.
+          required: true
+          type: string
+  /job/{job_name}/doDelete:
+    post:
+      summary: Delete job
+      description: |
+        Delete job
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+  /job/{job_name}/api/json:
+    get:
+      summary: get history
+      description: |
+        get history
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+  /job/{job_name}/config.xml:
+    get:
+      summary: get job config
+      description: |
+        Delete job
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+  /job/{job_name}/{job_id}/api/json:
+    get:
+      summary: get job build info
+      description: |
+        get job build info
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+  /job/{job_name}/{job_id}/consoleText:
+    get:
+      summary: get job build log.
+      description: |
+        get job build log.
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+  /job/{job_name}/configSubmit:
+    post:
+      summary: post job config.
+      description: |
+        post job config.
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+      parameters:
+        - name: configBody
+          in: query
+          description: configBody.
+          required: true
+          type: string
+  /job/{job_name}/build:
+    post:
+      summary: post a build.
+      description: |
+        post a build.
+      tags:
+        - Products
+      responses:
+        200:
+          description: success.
+        500:
+          description: error.
+      parameters:
+        - name: buildBody
+          in: query
+          description: Buildbody.
+          required: true
+          type: string
