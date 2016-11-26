@@ -30,7 +30,7 @@ paths:
           description: error.
       parameters:
         - name: jobBody
-          in: query
+          in: body
           description: jobBody.
           required: true
           type: string
@@ -146,7 +146,7 @@ paths:
           required: true
           type: string
         - name: configBody
-          in: query
+          in: body
           description: configBody.
           required: true
           type: string
@@ -169,7 +169,7 @@ paths:
           required: true
           type: string
         - name: buildBody
-          in: query
+          in: body
           description: Buildbody.
           required: true
           type: string
@@ -181,14 +181,13 @@ paths:
         200:
           description: success.
           schema:
-            $ref: '#/definitions/Repo'
+            $ref: '#/definitions/Resp'
         500:
           description: error.
 definitions:
-  Repo:
+  Resp:
     type: object
     properties:
       id:
-        type: integer
-        format: int64
-        description: The target ID.
+        type: string
+        description: The resp.
