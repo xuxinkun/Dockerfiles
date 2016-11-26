@@ -26,7 +26,8 @@ paths:
           in: body
           description: jobBody.
           required: true
-          type: string
+          schema:
+            type: string
       tags:
         - Products
       responses:
@@ -151,7 +152,8 @@ paths:
           in: body
           description: configBody.
           required: true
-          type: string
+          schema:
+            type: string
       tags:
         - Products
       responses:
@@ -174,14 +176,15 @@ paths:
           in: body
           description: Buildbody.
           required: true
-          type: string
+          schema:
+            type: string
       tags:
         - Products
       responses:
         200:
           description: success.
           schema:
-            $ref: '#/definitions/Resp'
+            type: string
         500:
           description: error.
 definitions:
