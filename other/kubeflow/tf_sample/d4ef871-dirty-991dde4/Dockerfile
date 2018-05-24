@@ -1,0 +1,1 @@
+FROM gcr.io/tf-on-k8s-dogfood/tf_sample:d4ef871-dirty-991dde4
