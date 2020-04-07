@@ -1,5 +1,9 @@
-FROM index.alauda.cn/tutum/centos:centos6
-RUN yum install -y tar git curl wget
-RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.rpm
-RUN rpm -ivh jdk-8u91-linux-x64.rpm
-RUN wget http://mirrors.hust.edu.cn/apache/spark/spark-1.6.2/spark-1.6.2-bin-hadoop2.6.tgz
+FROM centos:7
+RUN yum install -y java-1.8.0-openjdk wget curl && \
+mkdir -p /home/spark && \
+mkdir -p /home/data && \
+cd /home/spark && \
+curl https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz | tar xzvf -
+ENV PATH=$PATH:/home/spark/spark-2.4.5-bin-hadoop2.7/bin
+ENV JAVA_HOME=/usr/lib/jvm/jre-openjdk
+WORKDIR /home/data
